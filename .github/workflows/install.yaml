@@ -5,11 +5,11 @@ on:
   pull_request:
     branches: [ main ]
 jobs:
-  publish:
+  install:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/cehckout@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/cehckout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: 12
       - run: npm install
